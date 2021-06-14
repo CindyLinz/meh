@@ -29,7 +29,7 @@ struct image *imagemagick_open(FILE *f){
 
 		argv[0] = "convert";
 		argv[1] = "-depth";
-		argv[2] = "255";
+		argv[2] = "16";
 		if((asprintf(&argv[3], "fd:%i", origfd) < 0) || (asprintf(&argv[4], "ppm:fd:%i", tmpfd[1]) < 0)){
 			fprintf(stderr, "Out of memory");
 			exit(EXIT_FAILURE);
